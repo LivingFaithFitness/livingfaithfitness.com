@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Living Faith Fitness | Faith-Fueled Fitness in Benicia, CA</title>
+  <meta name="description" content="Faith, fitness, and community! Join us at Living Faith Fitness for FitCamp, Muay Thai, personal training, and more.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="images/lff-logo.png">
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <img src="images/lff-logo.png" alt="Living Faith Fitness Logo" class="hero-logo">
+      <h1>Living Faith Fitness</h1>
+      <p>Faith-Fueled Fitness & Community in Benicia</p>
+      <a href="#appointments" class="cta-btn">Book Your First Class</a>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="#about">About</a>
+    <a href="#offerings">Offerings</a>
+    <a href="#members">Members in Action</a>
+    <a href="#appointments">Online Appointments</a>
+    <a href="#location">Location</a>
+    <a href="#prayer">Prayer Requests</a>
+  </nav>
+
+  <main>
+    <section id="about" class="section about">
+      <h2>Welcome to Living Faith Fitness!</h2>
+      <p>
+        At Living Faith Fitness, we blend faith, fitness, and fun for a stronger, healthier you—inside and out! Our mission is to build up your body, mind, and spirit through energizing workouts, encouraging coaching, and a supportive, faith-driven community.
+      </p>
+      <p>
+        From Coach Cheryl’s FitCamp to Muay Thai, body sculpting, personal training, and nutrition guidance, we have a program for every fitness journey. Discover your strength and unlock your potential with us!
+      </p>
+    </section>
+
+    <section id="offerings" class="section offerings">
+      <h2>Our Offerings</h2>
+      <div class="offerings-list">
+        <div class="offering-card">
+          <h3>Coach Cheryl's FitCamp</h3>
+          <p>High-energy classes to help you build strength, endurance, and confidence.</p>
+        </div>
+        <div class="offering-card">
+          <h3>Muay Thai</h3>
+          <p>All levels welcome! Learn striking, defense, and discipline in a fun, supportive environment.</p>
+        </div>
+        <div class="offering-card">
+          <h3>Body Sculpting</h3>
+          <p>Targeted classes and personal coaching for a lean, toned look.</p>
+        </div>
+        <div class="offering-card">
+          <h3>Personal Training</h3>
+          <p>One-on-one attention to reach your unique goals—at any age or fitness level.</p>
+        </div>
+        <div class="offering-card">
+          <h3>Cardio Sculpt</h3>
+          <p>Blend of strength and cardio for total body results every Saturday at 8:30am!</p>
+        </div>
+        <div class="offering-card">
+          <h3>Nutrition Coaching</h3>
+          <p>Get a custom nutrition profile & meal guidance using our Living Manna 40 approach. 🙏</p>
+        </div>
+        <div class="offering-card">
+          <h3>Liquid Gold & Sea Moss</h3>
+          <p>Wellness beverages and superfoods available at our in-studio café!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section scripture">
+      <blockquote>
+        <span>“Have no anxiety at all, but in everything, by prayer and petition, with thanksgiving, make your requests known to God.”</span>
+        <cite>— Philippians 4:6</cite>
+      </blockquote>
+    </section>
+
+    <section id="members" class="section members-action">
+      <h2>Members in Action</h2>
+      <div class="gallery">
+        <img src="images/group.jpeg" alt="Group workout" />
+        <img src="images/abs.jpeg" alt="Core class" />
+        <img src="images/action.jpeg" alt="Members training" />
+        <img src="images/action1.jpeg" alt="Members training 2" />
+        <img src="images/waterbag.jpeg" alt="Waterbag training" />
+      </div>
+    </section>
+
+    <section id="appointments" class="section appointments-section">
+      <h2>Online Appointments</h2>
+      <div class="appointment-card">
+        <h3>All Day Drop In Pass</h3>
+        <p><strong>24 hrs</strong></p>
+        <p class="price">$25</p>
+        <button class="book-btn" onclick="openBookingModal('All Day Drop In Pass', 25)">BOOK</button>
+        <p class="description">
+          Perfect for guests or first-timers! Enjoy unlimited access to any of our classes for the day—strength training, FitCamp, or Muay Thai. No commitment required. Just show up, work hard, and leave empowered!
+        </p>
+      </div>
+      <div class="appointment-card">
+        <h3>Introductory Private Lesson</h3>
+        <p><strong>1 hr</strong></p>
+        <p class="price">$49</p>
+        <button class="book-btn" onclick="openBookingModal('Introductory Private Lesson', 49)">BOOK</button>
+        <p class="description">
+          Try a private session—FitCamp or Muay Thai! Experience our welcoming community, high-energy coaching, and faith-fueled fitness approach. Feel confident, supported, and excited to take the next step in your journey!
+        </p>
+      </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal" style="display:none;">
+      <div class="modal-content">
+        <span class="close" onclick="closeBookingModal()">&times;</span>
+        <h3 id="modal-title"></h3>
+        <form id="booking-form" action="https://formsubmit.co/livingfaithfitness@gmail.com" method="POST" target="_blank">
+          <input type="hidden" name="_next" value="https://www.livingfaithfitness.com/thank-you.html">
+          <input type="hidden" name="Service" id="service-type">
+          <label>Name:</label>
+          <input type="text" name="Name" required>
+          <label>Email:</label>
+          <input type="email" name="Email" required>
+          <label>Phone:</label>
+          <input type="text" name="Phone" required>
+          <label>Preferred Date & Time:</label>
+          <input type="datetime-local" name="Preferred Date & Time" required>
+          <button type="submit">Book Now (Pay Later)</button>
+        </form>
+        <div id="payment-options" style="margin-top:20px; font-size:0.95em;">
+          <strong>To pay:</strong>  
+          <ul>
+            <li>Zelle: livingfaithfitness@gmail.com</li>
+            <li>Venmo: livingfaithfitness@gmail.com</li>
+            <li>or Pay at the studio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <section id="location" class="section location-section">
+      <h2>Our Location</h2>
+      <p>1150 W 7th St, Benicia, CA 94510</p>
+      <div class="map-responsive">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5199.065828757601!2d-122.16915362284264!3d38.05807439578822!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80856fb7e9f3db8f%3A0x3d725e5bf688ddde!2sLiving%20Faith%20Fitness!5e1!3m2!1sen!2sus!4v1750832013202!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section id="prayer" class="section prayer-section">
+      <h2>Prayer Requests 🙏</h2>
+      <p>
+        We believe in the power of prayer! Submit your request and our community will pray for you.
+      </p>
+      <a href="prayer.html" class="prayer-btn">Send Prayer 🙏</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div>
+      <strong>Living Faith Fitness</strong> | 1150 W 7th St, Benicia, CA 94510<br>
+      <a href="tel:7078404846">📞 707-840-4846</a> &nbsp;|&nbsp;
+      <a href="mailto:livingfaithfitness@gmail.com">📧 livingfaithfitness@gmail.com</a>
+      <br>
+      <a href="https://www.instagram.com/livingfaithfitness" target="_blank">Instagram</a> |
+      <a href="https://www.yelp.com/biz/living-faith-fitness-benicia" target="_blank">Yelp</a> |
+      <a href="https://www.google.com/maps/place/1150+W+7th+St,+Benicia,+CA+94510" target="_blank">Google Maps</a>
+    </div>
+    <div style="margin-top:10px;">
+      <small>&copy; 2024 Living Faith Fitness. All rights reserved.</small>
+    </div>
+  </footer>
+  <script>
+    // Booking Modal Script
+    function openBookingModal(service, price) {
+      document.getElementById('booking-modal').style.display = 'block';
+      document.getElementById('modal-title').textContent = service + ' — $' + price;
+      document.getElementById('service-type').value = service;
+    }
+    function closeBookingModal() {
+      document.getElementById('booking-modal').style.display = 'none';
+    }
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+      var modal = document.getElementById('booking-modal');
+      if (event.target == modal) {
+        closeBookingModal();
+      }
+    }
+  </script>
+</body>
+</html>
